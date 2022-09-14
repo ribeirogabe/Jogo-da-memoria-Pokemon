@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    letter-spacing: 5px;
+    font-family: 'Common Pixel', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../assets/images/pokeball/background_pixel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+    width: 105px;
+    padding: 0;
+}
+
+.card{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card_back, .card_front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 4px solid black;
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45); */
+    backface-visibility: hidden;
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+.card_front{
+    background-color: rgb(255, 204, 204);
+    transform: rotateY(180deg);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+    cursor: not-allowed;
+}
+
+.card_back{
+    background: none;
+    border: none;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    /* display: none; */
+}
+
+/* tela de jogo acabou*/
+
+#gameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 35px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+}
+
+#restart{
+    padding: 20px;
+    font-size: 20px;
+    background-color: white;
+    /* font-family: 'Pokemon Solid', sans-serif; */
+    border: none;
+    border-radius: 10px;     
+    margin-top: 10px;  
+    cursor: pointer;
+    font-family: 'Common Pixel', sans-serif;
+}
+
+#restart:hover{
+    color: white;
+    background-color: rgb(187, 37, 37);
+    transition: 500ms;
+}
+
+.pkm_logo{
+    width: 250px;
+    display: flex;
+    position: relative;
+    bottom: 280px;
+    left: 360px;
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.4));
+}
+
+/* game board style */
+
+#gameBoard{
+    position: relative;
+    left: -10%;
+
+    max-width: 900px;
+    height: 400px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
