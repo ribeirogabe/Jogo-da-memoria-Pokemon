@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.my_insta{
+    display: flex;
+    position: relative;
+    top: 300px;
+    right: 500px;
+}
 
 body{
     letter-spacing: 5px;
@@ -101,7 +112,7 @@ img{
     display: flex;
     position: relative;
     bottom: 280px;
-    left: 360px;
+    left: 520px;
     filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.4));
 }
 
@@ -109,7 +120,7 @@ img{
 
 #gameBoard{
     position: relative;
-    left: -10%;
+    left: 2%;
 
     max-width: 900px;
     height: 400px;
